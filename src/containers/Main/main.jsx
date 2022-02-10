@@ -1,18 +1,22 @@
 import React from 'react'
 import "./main.scss"
-import CardList from '../../components/CardList/CardList'
-import beers from '../../data/beers'
+import BeerCard from '../../components/BeerCard/BeerCard'
 
-const main = () => {
-
-    const images = beers.filter(beer => beer.image_url).slice(0, 5);
-    console.log(images)
+const Main = (props) => {
+    const {beersArr} = props
+    const BeerJSX = beersArr.map((beer) => {
+        return <BeerCard 
+        image= {beer.image_url}
+        name= {beer.name}
+        tagline= {beer.tagline}
+        />
+    });
 
     return (
-        <div>
-           <CardList images={images}/>
+        <div className='cards'>
+           {BeerJSX}
         </div>
     )
-}
+};
 
-export default main
+export default Main;

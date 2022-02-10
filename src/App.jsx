@@ -1,14 +1,16 @@
 import './App.scss';
 import beers from "./data/beers";
-import main from './containers/Main/main';
-import nav from './containers/nav/nav';
+import Main from './containers/Main/Main';
+import BeerCard from './components/BeerCard/BeerCard';
+import Nav from './containers/Nav/Nav';
 
 
 const App = () => {
 
   return (
     <div className="App">
-     <img src={beers[0].image_url} alt="" />
+      <Nav />
+      <Main beersArr={beers}/>
 
     </div>
   );
