@@ -6,6 +6,9 @@ const CardList = () => {
     return (
         <div>
             <BeerCard />
+            <BeerCard />
+            <BeerCard />
+            
         </div>
     )
 }

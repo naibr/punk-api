@@ -1,7 +1,9 @@
 import React from 'react'
 import "./BeerCard.scss"
 
-const BeerCard = () => {
+const BeerCard = (props) => {
+    const {image, name, description} = props;
+
     return (
         <div>
             
