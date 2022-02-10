@@ -1,16 +1,14 @@
-import React from 'react'
-import "./Nav.scss"
+import React from "react";
+import SearchBox from "../../components/SearchBox/SearchBox";
+import FilterList from "../FilterList/FilterList";
 
-const Nav = () => {
-    return (
-        
-        <div>
-            <input type="text"  />
-            <h2>High ABV</h2>
-            <h2>Classic Range</h2>
-            <h2>Acidic</h2>
-        </div>
-    )
-}
+const Nav = (props) => {
+  return (
+    <nav>
+      <SearchBox setSearchTerm={props.setSearchTerm} />
+      <FilterList checkBoxState={props.checkBoxState} />
+    </nav>
+  );
+};
 
-export default Nav
+export default Nav;
