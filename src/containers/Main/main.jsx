@@ -1,21 +1,11 @@
 import React from 'react'
 import "./main.scss"
-import BeerCard from '../../components/BeerCard/BeerCard'
+import CardList from '../../components/CardList/CardList';
 
 const Main = (props) => {
-    const {beersArr} = props
-    const BeerJSX = beersArr.map((beer) => {
-        return <BeerCard 
-        image= {beer.image_url}
-        name= {beer.name}
-        tagline= {beer.tagline}
-        />
-    });
 
     return (
-        <div className='cards'>
-           {BeerJSX}
-        </div>
+        <CardList searchTerm={props.searchTerm}  checkBoxState={props.checkBoxState}/>
     )
 };
 
