@@ -1,4 +1,5 @@
 import React from 'react'
+import "./FilterItem.scss"
 
 const FilterItem = (props) => {
    
@@ -12,9 +13,9 @@ const FilterItem = (props) => {
         }
     }
     return (
-        <div>
+        <div className='filters'>
             <h2>{props.text}</h2>
-            <input onChange={checkCheckBox} type="checkbox" name="" id=""></input>
+            <input className='boxes' onChange={checkCheckBox} type="checkbox" name="" id=""></input>
         </div>
     )
 }
